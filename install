@@ -1,0 +1,17 @@
+#!/bin/bash
+echo $'\e[32;1m'"---installing upgrade"$'\e[0m'
+apt update && apt upgrade -y
+echo $'\e[32;1m'"---installing required packages"$'\e[0m'
+apt install python figlet toilet libxslt libxml2 qpdf -y
+echo $'\e[32;1m'"---installing modules"$'\e[0m'
+pip install requests 
+pip install tqdm
+pip install pikepdf
+echo $'\e[32;1m'"---installing PDFBRUTE"$'\e[0m'
+curl -LO https://raw.githubusercontent.com/Anon4You/PDFBrute/main/pdfbrute
+mv pdfbrute $PATH
+chmod 777 $PATH/pdfbrute
+clear
+figlet -f smblock Installed
+echo now you can run the tool
+echo "by typing"$'\e[32;1m'" pdfbrute"
