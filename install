@@ -11,6 +11,8 @@ echo $'\e[32;1m'"---installing PDFBRUTE"$'\e[0m'
 curl -LO https://raw.githubusercontent.com/Anon4You/PDFBrute/main/pdfbrute
 mv pdfbrute $PATH
 chmod 777 $PATH/pdfbrute
+echo -e $'\e[32;1m'"---generating wordlist\nwill take some time..."$'\e[0m'
+crunch 4 4 -f $PREFIX/share/crunch/charset.lst mixalpha-numeric -o .pass.txt > /dev/null 2>&1 
 clear
 figlet -f smblock Installed
 echo now you can run the tool
