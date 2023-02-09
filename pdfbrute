@@ -2,6 +2,14 @@
 import os,pikepdf,random,itertools,threading,os.path,time,requests,sys
 from tqdm import tqdm
 
+version="""1.0
+"""
+chvr=requests.get("https://raw.githubusercontent.com/Anon4You/PDFBrute/main/version").text
+if chvr != version:
+  updt=input ("New version available do you want to update it [Y/n] ")
+  if updt!='n':
+    os.system("curl -LO https://raw.githubusercontent.com/Anon4You/PDFBrute/main/pdfbrute && mv pdfbrute $PATH && chmod 777 $PATH/pdfbrute && pdfbrute") 
+
 logo="""\a\a\33[34;1m
 ▛▀▖▛▀▖▛▀▘▌        ▐
 ▙▄▘▌ ▌▙▄ ▛▀▖▙▀▖▌ ▌▜▀ ▞▀▖
@@ -96,5 +104,9 @@ elif k=='1':
   default()
 elif k=='2':
   custom()
+elif k=='3':
+  os.system("curl -sSL https://raw.githubusercontent.com/Anon4You/PDFBrute/main/about | cat") 
+elif k=='4':
+  os.system("xdg-open 'https://www.instagram.com/alienkrishn'") 
 else:
   os.system("pdfbrute")
