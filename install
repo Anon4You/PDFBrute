@@ -1,9 +1,9 @@
 #!/bin/bash
-termux-setup-storage > /dev/null 2>&1
+termux-setup-storage
 echo $'\e[32;1m'"---installing upgrade"$'\e[0m'
 apt update && apt upgrade -y
 echo $'\e[32;1m'"---installing required packages"$'\e[0m'
-apt install python figlet toilet libxslt libxml2 qpdf crunch -y
+apt install python python-pip figlet toilet libxslt libxml2 qpdf crunch -y
 echo $'\e[32;1m'"---installing modules"$'\e[0m'
 pip install requests 
 pip install tqdm
