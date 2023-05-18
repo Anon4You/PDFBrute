@@ -1,4 +1,4 @@
-# PDFBrute 1.1
+# PDFBrute V 1.1
 A simple and easy pdf bruteforcing tool for termux tool by Alienkrishn.. 👽🦚
 
 <img src="Screenshot_2023-02-09-19-52-34-397-edit_com.termux.jpg"/><img src="Screenshot_2023-02-09-19-54-28-554-edit_com.termux.jpg"/>
