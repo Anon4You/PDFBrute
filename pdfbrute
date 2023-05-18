@@ -2,7 +2,7 @@
 import os,pikepdf,random,itertools,threading,os.path,time,requests,sys
 from tqdm import tqdm
 
-version="""1.0
+version="""1.1
 """
 chvr=requests.get("https://raw.githubusercontent.com/Anon4You/PDFBrute/main/version").text
 if chvr != version:
@@ -94,7 +94,7 @@ def custom():
     except pikepdf.PasswordError as e:
       continue
 
-if k=='0':
+if k=='5':
   t.start()
   time.sleep(1)
   stop = True
